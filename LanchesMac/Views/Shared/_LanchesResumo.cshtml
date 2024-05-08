@@ -1,0 +1,23 @@
+﻿@model Lanche
+
+<div class="col-md-4 mb-5">
+    <div class="card h-100 shadow border-0">
+        <img class="card-img-top img-fluid img-lanche" src="@Model.ImagemUrl" alt="Imagem do lanche" />
+        <div class="card-body p-4">
+
+            <h5 class="card-title mb-3">@Model.Nome</h5>
+
+            <p class="card-text mb-0">@Model.DescricaoCurta</p>
+
+        </div>
+        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+            <div class="d-flex align-items-end justify-content-between">
+                <div class="d-flex align-items-center">
+                    <div class="small">
+                        <div class="text-muted">@Model.Preco.ToString("c")</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,4 @@
+using LanchesMac.Context;
 using LanchesMac.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -6,19 +7,14 @@ namespace LanchesMac.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+         protected readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(AppDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
         {
             return View();
         }
