@@ -4,6 +4,6 @@ namespace LanchesMac.ViewModels
 {
     public class HomeViewModel
     {
-        public IEnumerable<Lanche> lanchesPreferidos { get; set; }
+        public IEnumerable<Lanche> LanchesPreferidos { get; set; }
     }
 }

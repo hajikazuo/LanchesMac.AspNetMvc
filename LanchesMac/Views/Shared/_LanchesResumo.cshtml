@@ -5,16 +5,20 @@
         <img class="card-img-top img-fluid img-lanche" src="@Model.ImagemUrl" alt="Imagem do lanche" />
         <div class="card-body p-4">
 
-            <h5 class="card-title mb-3">@Model.Nome</h5>
+            <a asp-controller="Lanche" asp-action="Details" asp-route-lancheId="@Model.LancheId">
+                <h5 class="card-title mb-3">@Model.Nome</h5>
+            </a>
 
             <p class="card-text mb-0">@Model.DescricaoCurta</p>
-
         </div>
         <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
             <div class="d-flex align-items-end justify-content-between">
                 <div class="d-flex align-items-center">
                     <div class="small">
-                        <div class="text-muted">@Model.Preco.ToString("c")</div>
+                        <div class="text-muted mb-3">@Model.Preco.ToString("c")</div>
+                        <p class="button">
+                            <a asp-controller="CarrinhoCompra" asp-action="AdicionarItemNoCarrinhoCompra" asp-route-lancheId="@Model.LancheId" class="btn btn-primary">Adicionar ao Carrinho</a>
+                        </p>
                     </div>
                 </div>
             </div>
